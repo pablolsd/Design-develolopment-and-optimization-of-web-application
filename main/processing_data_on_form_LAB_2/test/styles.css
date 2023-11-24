@@ -1,0 +1,48 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 20px;
+}
+
+h2 {
+	color: #333;
+}
+
+form {
+	max-width: 600px;
+	margin: 20px 0;
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+	margin-right: 5px;
+}
+
+input[type="submit"] {
+	padding: 10px;
+	background-color: #4caf50;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background-color: #45a049;
+}
+
+.results {
+	margin-top: 20px;
+	padding: 10px;
+	border: 1px solid #ddd;
+}
+
+.results p {
+	margin: 0;
+}
+
+.results h2 {
+	color: #333;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Тестирование</title>
+</head>
+<body>
+    <h2>Тест</h2>
+    <form action="process_test.php" method="post">
+        <p>1. Какой язык программирования вы предпочитаете?</p>
+        <label><input type="checkbox" name="question1[]" value="php"> PHP</label>
+        <label><input type="checkbox" name="question1[]" value="python"> Python</label>
+        <label><input type="checkbox" name="question1[]" value="javascript"> JavaScript</label>
+
+        <p>2. Какие фреймворки вы использовали?</p>
+        <label><input type="checkbox" name="question2[]" value="laravel"> Laravel</label>
+        <label><input type="checkbox" name="question2[]" value="django"> Django</label>
+        <label><input type="checkbox" name="question2[]" value="express"> Express.js</label>
+
+        <p>3. Как вы предпочитаете тестировать свой код?</p>
+        <label><input type="checkbox" name="question3[]" value="phpunit"> PHPUnit</label>
+        <label><input type="checkbox" name="question3[]" value="pytest"> PyTest</label>
+        <label><input type="checkbox" name="question3[]" value="mocha"> Mocha</label>
+
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>
