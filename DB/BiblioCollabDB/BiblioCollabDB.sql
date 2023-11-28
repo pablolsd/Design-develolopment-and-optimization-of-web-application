@@ -1,0 +1,24 @@
+-- Active: 1701147772488@@local@3000
+CREATE DATABASE IF NOT EXISTS bibliocollabdb;
+USE bibliocollabdb;
+
+
+CREATE TABLE IF NOT EXISTS Books (
+    BookID INT PRIMARY KEY AUTO_INCREMENT,
+    Title VARCHAR(255)
+);
+
+
+CREATE TABLE IF NOT EXISTS Authors (
+    AuthorID INT PRIMARY KEY AUTO_INCREMENT,
+    AuthorName VARCHAR(255)
+);
+
+
+CREATE TABLE IF NOT EXISTS BookAuthors (
+    BookID INT,
+    AuthorID INT,
+    FOREIGN KEY (BookID) REFERENCES Books(BookID),
+    FOREIGN KEY (AuthorID) REFERENCES Authors(AuthorID),
+    PRIMARY KEY (BookID, AuthorID)
+);

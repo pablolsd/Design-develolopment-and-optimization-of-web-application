@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build">
+  <Sdk Name="Microsoft.Build.Sql" Version="0.1.12-preview" />
+  <PropertyGroup>
+    <Name>CineCountries</Name>
+    <ProjectGuid>{4F4C5535-75DB-4DE2-AD24-6BB35B5AD5A0}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <ModelCollation>1033, CI</ModelCollation>
+  </PropertyGroup>
+  <Target Name="BeforeBuild">
+    <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
+  </Target>
+</Project>
