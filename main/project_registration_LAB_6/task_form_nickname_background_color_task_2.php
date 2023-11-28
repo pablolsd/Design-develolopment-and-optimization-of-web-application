@@ -76,7 +76,7 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Получение данных из формы
+  
     $username = $_POST["username"];
     $backgroundColor = $_POST["background_color"];
 
