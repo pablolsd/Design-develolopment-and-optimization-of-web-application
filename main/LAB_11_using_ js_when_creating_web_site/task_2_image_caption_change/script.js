@@ -1,34 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Изменение изображения и цвета</title>
-  <style>
-    body {
-      text-align: center;
-    }
-
-    img {
-      width: 200px;
-      height: 200px;
-      transition: transform 0.3s;
-      cursor: pointer;
-    }
-
-    p {
-      font-size: 18px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-
-<img id="mainImage" src="https://via.placeholder.com/200" alt="Изображение">
-<p id="caption" onclick="changeColor()">Подпись под изображением</p>
-
-<script>
-  let imageIndex = 0;
+let imageIndex = 0;
   const images = [
     "https://via.placeholder.com/200",
     "https://via.placeholder.com/200/0000FF",
@@ -58,7 +28,3 @@
   }
 
   document.getElementById("mainImage").addEventListener("click", changeImage);
-</script>
-
-</body>
-</html>
