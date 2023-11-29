@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор марки автомобиля</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+		<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <label for="carMake">Выберите марку автомобиля:</label>
+    <select id="carMake" onchange="getCarModels()">
+			<option value="toyota">Toyota</option>
+			<option value="honda">Honda</option>
+			<option value="ford">Ford</option>
+			<option value="chevrolet">Chevrolet</option>
+			<option value="nissan">Nissan</option>
+			<option value="bmw">BMW</option>
+			<option value="mercedes">Mercedes-Benz</option>
+			<option value="audi">Audi</option>
+			<option value="volkswagen">Volkswagen</option>
+			
+			
+    </select>
+
+    <br>
+
+    <label for="carModel">Модель автомобиля:</label>
+    <select id="carModel"></select>
+
+    <script>
+        function getCarModels() {
+            var selectedMake = $("#carMake").val();
+
+            $.ajax({
+                url: "get_car_models.php",
+                method: "POST",
+                data: {make: selectedMake},
+                success: function (data) {
+                    $("#carModel").html(data);
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
