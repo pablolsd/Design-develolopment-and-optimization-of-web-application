@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказ мебели</title>
+    <script src="validate.js" defer></script>
+		<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Заказ мебели</h1>
+    <form id="orderForm" action="process_order.php" method="post" onsubmit="return validateForm()">
+        <label for="furniture">Изделие:</label>
+        <select id="furniture" name="furniture">
+            <option value="Шкаф">Шкаф</option>
+            <option value="Стол">Стол</option>
+            <option value="Сервант">Сервант</option>
+            
+        </select>
+
+        <label for="material">Материал:</label>
+        <select id="material" name="material">
+            <option value="Дуб">Дуб</option>
+            <option value="Орех">Орех</option>
+            <option value="Бук">Бук</option>
+            
+        </select>
+
+        <label for="quantity">Количество:</label>
+        <input type="number" id="quantity" name="quantity" required>
+
+        <input type="submit" value="Отправить заказ">
+    </form>
+</body>
+</html>

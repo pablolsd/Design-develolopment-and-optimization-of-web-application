@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#ellipse-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#ellipse {
+  position: absolute;
+  background-color: lightblue;
+  border-radius: 50%;
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+#ellipse::before, #ellipse::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+#ellipse::after {
+  width: 2px;
+  height: 100%;
+  background-color: black;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}

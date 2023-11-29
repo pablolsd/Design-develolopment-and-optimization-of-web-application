@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Генератор Тригонометрических Таблиц</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Генератор Тригонометрических Таблиц</h1>
+        <div id="inputPage">
+            <label for="function">Выберите функцию:</label>
+            <select id="function">
+                <option value="sin">sin</option>
+                <option value="cos">cos</option>
+                <option value="tan">tan</option>
+            </select>
+            <br>
+            <label for="start">Начальный угол:</label>
+            <input type="number" id="start" placeholder="Введите начальный угол">
+            <br>
+            <label for="end">Конечный угол:</label>
+            <input type="number" id="end" placeholder="Введите конечный угол">
+            <br>
+            <label for="step">Шаг:</label>
+            <input type="number" id="step" placeholder="Введите шаг">
+            <br>
+            <button onclick="generateTable()">Сгенерировать Таблицу</button>
+        </div>
+        <div id="outputPage" style="display:none;">
+            <h2>Тригонометрическая Таблица</h2>
+            <table id="resultTable">
+                
+            </table>
+            <button onclick="goBack()">Назад</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
